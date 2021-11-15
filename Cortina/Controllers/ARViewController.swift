@@ -45,6 +45,11 @@ class ARViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Delegate
+        arManager.delegate      = self
+        appManager.delegate     = self
+        
+        //Scene
         sceneView.placingMode           = .quickDrop
         sceneView.arBaseDelegate        = self
         sceneView.isAutoFocusEnabled    = true

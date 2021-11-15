@@ -18,9 +18,33 @@ struct ARView: View {
             .edgesIgnoringSafeArea(.all)
             .overlay(
                 VStack {
-                    //
+                    editingOverlay
                 }
             )
+    }
+    
+    var editingOverlay: some View {
+        VStack {
+            HStack {
+                Spacer()
+                if appManager.isEditingModel {
+                    Button(action: {
+                        appManager.changeEditingModel()
+                    }, label: {
+                        VStack {
+                            Image(systemName: "checkmark")
+                                .font(.title)
+                                .foregroundColor(.white)
+                        }
+                        .padding()
+                        .background(Color.gray)
+                        .mask(Circle())
+                    })
+                }
+            }
+            Spacer()
+        }
+        .padding()
     }
     
     var body: some View {

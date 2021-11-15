@@ -12,6 +12,9 @@ import SceneKit
 extension ARViewController: ARBaseDelegate {
     func arBaseViewDidLongPress(on virtualObject: ARBaseVirtualObject?) {
         sceneView.currentVirtualObject  = virtualObject
+        if currentVirtualObjectEditing?.isEditing == false {
+            appManager.changeEditingModel()
+        }
     }
     
     func arBaseViewWillPlace(_ virtualObject: ARBaseVirtualObject, at transform: SCNMatrix4) {

@@ -25,6 +25,8 @@
 		88B37AB8274297D200B24334 /* ARViewController+AppManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B37AB7274297D200B24334 /* ARViewController+AppManagerDelegate.swift */; };
 		88B37ABB2742997C00B24334 /* Art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B37ABA2742997C00B24334 /* Art.scnassets */; };
 		88B37ABD27429A7F00B24334 /* CortinaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B37ABC27429A7F00B24334 /* CortinaApp.swift */; };
+		88B37ABF27429B9B00B24334 /* ARBase.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B37ABE27429B9B00B24334 /* ARBase.scnassets */; };
+		88B37AC127429D9F00B24334 /* CortinaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B37AC027429D9F00B24334 /* CortinaModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		88B37AB7274297D200B24334 /* ARViewController+AppManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+AppManagerDelegate.swift"; sourceTree = "<group>"; };
 		88B37ABA2742997C00B24334 /* Art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Art.scnassets; sourceTree = "<group>"; };
 		88B37ABC27429A7F00B24334 /* CortinaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CortinaApp.swift; sourceTree = "<group>"; };
+		88B37ABE27429B9B00B24334 /* ARBase.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = ARBase.scnassets; sourceTree = "<group>"; };
+		88B37AC027429D9F00B24334 /* CortinaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CortinaModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,7 @@
 		88B37AA127428D9600B24334 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				88B37AC027429D9F00B24334 /* CortinaModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 		88B37AB92742996800B24334 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				88B37ABE27429B9B00B24334 /* ARBase.scnassets */,
 				881D0906273BD41A00A082D6 /* Assets.xcassets */,
 				881D0908273BD41A00A082D6 /* Preview Content */,
 				88B37ABA2742997C00B24334 /* Art.scnassets */,
@@ -336,6 +342,7 @@
 				881D090A273BD41A00A082D6 /* Preview Assets.xcassets in Resources */,
 				881D0907273BD41A00A082D6 /* Assets.xcassets in Resources */,
 				88B37ABB2742997C00B24334 /* Art.scnassets in Resources */,
+				88B37ABF27429B9B00B24334 /* ARBase.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +373,7 @@
 				88B37AB22742940900B24334 /* ARViewManager.swift in Sources */,
 				88B37AB62742969700B24334 /* AppManagerDelegate.swift in Sources */,
 				88B37AAB27428EA000B24334 /* ARManagerDelegate.swift in Sources */,
+				88B37AC127429D9F00B24334 /* CortinaModel.swift in Sources */,
 				88B37AA427428DAF00B24334 /* ARViewController.swift in Sources */,
 				88B37AA727428DE500B24334 /* ARComponent.swift in Sources */,
 				88B37AB8274297D200B24334 /* ARViewController+AppManagerDelegate.swift in Sources */,
