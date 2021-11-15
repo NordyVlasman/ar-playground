@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol ARManagerDelegate {
+protocol ARManagerDelegate: AnyObject  {
     func changeColor(to color: UIColor)
     func toggleItem(_ itemName: String)
 }

@@ -11,6 +11,9 @@ import UIKit
 import SceneKit
 
 class ARViewController: UIViewController {
+    var arManager:  ARViewManager
+    var appManager: AppManager
+    
     let sceneView       = ARBaseView()
     let loader          = ARBaseVirtualObjectLoader()
     let referenceNode   = SCNReferenceNode(named: "Art.scnassets/scene.scn")!
@@ -28,7 +31,9 @@ class ARViewController: UIViewController {
     }
     
     //MARK: - Initialize ARManager and other SwiftUI elements.
-    init() {
+    init(arManager: ARViewManager, appManager: AppManager) {
+        self.arManager  = arManager
+        self.appManager = appManager
         super.init(nibName: nil, bundle: nil)
     }
     

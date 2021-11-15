@@ -21,6 +21,10 @@
 		88B37AAB27428EA000B24334 /* ARManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B37AAA27428EA000B24334 /* ARManagerDelegate.swift */; };
 		88B37AAE27428EF700B24334 /* ARViewController+ARManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B37AAD27428EF700B24334 /* ARViewController+ARManagerDelegate.swift */; };
 		88B37AB0274290B800B24334 /* ARViewController+ARBaseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B37AAF274290B800B24334 /* ARViewController+ARBaseDelegate.swift */; };
+		88B37AB22742940900B24334 /* ARViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B37AB12742940900B24334 /* ARViewManager.swift */; };
+		88B37AB42742965400B24334 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B37AB32742965300B24334 /* AppManager.swift */; };
+		88B37AB62742969700B24334 /* AppManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B37AB52742969700B24334 /* AppManagerDelegate.swift */; };
+		88B37AB8274297D200B24334 /* ARViewController+AppManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B37AB7274297D200B24334 /* ARViewController+AppManagerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		88B37AAA27428EA000B24334 /* ARManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARManagerDelegate.swift; sourceTree = "<group>"; };
 		88B37AAD27428EF700B24334 /* ARViewController+ARManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+ARManagerDelegate.swift"; sourceTree = "<group>"; };
 		88B37AAF274290B800B24334 /* ARViewController+ARBaseDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+ARBaseDelegate.swift"; sourceTree = "<group>"; };
+		88B37AB12742940900B24334 /* ARViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewManager.swift; sourceTree = "<group>"; };
+		88B37AB32742965300B24334 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		88B37AB52742969700B24334 /* AppManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManagerDelegate.swift; sourceTree = "<group>"; };
+		88B37AB7274297D200B24334 /* ARViewController+AppManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+AppManagerDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				88B37AAA27428EA000B24334 /* ARManagerDelegate.swift */,
+				88B37AB52742969700B24334 /* AppManagerDelegate.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -182,6 +191,8 @@
 		88B37AA227428D9B00B24334 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				88B37AB12742940900B24334 /* ARViewManager.swift */,
+				88B37AB32742965300B24334 /* AppManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -199,6 +210,7 @@
 			children = (
 				88B37AAD27428EF700B24334 /* ARViewController+ARManagerDelegate.swift */,
 				88B37AAF274290B800B24334 /* ARViewController+ARBaseDelegate.swift */,
+				88B37AB7274297D200B24334 /* ARViewController+AppManagerDelegate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -340,10 +352,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				88B37AA927428E6000B24334 /* ARView.swift in Sources */,
+				88B37AB42742965400B24334 /* AppManager.swift in Sources */,
+				88B37AB22742940900B24334 /* ARViewManager.swift in Sources */,
+				88B37AB62742969700B24334 /* AppManagerDelegate.swift in Sources */,
 				88B37AAB27428EA000B24334 /* ARManagerDelegate.swift in Sources */,
 				88B37AA427428DAF00B24334 /* ARViewController.swift in Sources */,
 				881D0903273BD41800A082D6 /* ContentView.swift in Sources */,
 				88B37AA727428DE500B24334 /* ARComponent.swift in Sources */,
+				88B37AB8274297D200B24334 /* ARViewController+AppManagerDelegate.swift in Sources */,
 				881D0901273BD41800A082D6 /* AppDelegate.swift in Sources */,
 				88B37AB0274290B800B24334 /* ARViewController+ARBaseDelegate.swift in Sources */,
 				88B37AAE27428EF700B24334 /* ARViewController+ARManagerDelegate.swift in Sources */,
