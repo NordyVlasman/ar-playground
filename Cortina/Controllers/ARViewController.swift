@@ -11,13 +11,21 @@ import UIKit
 import SceneKit
 
 class ARViewController: UIViewController {
-   
     let sceneView       = ARBaseView()
     let loader          = ARBaseVirtualObjectLoader()
     let referenceNode   = SCNReferenceNode(named: "Art.scnassets/scene.scn")!
     
     let debugOptions:                   ARBaseDebugOptions = []
     var currentVirtualObjectEditing:    ARBaseVirtualObject?
+    
+    //MARK: - Tweaks
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
     
     //MARK: - Initialize ARManager and other SwiftUI elements.
     init() {
@@ -59,6 +67,12 @@ class ARViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         initializeARModel()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        sceneView.resetAR(withDebugOptions: [])
+        sceneView.stopAR()
+        super.viewWillDisappear(animated)
     }
     
     //MARK: - View Markup
