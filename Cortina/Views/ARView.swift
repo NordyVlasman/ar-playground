@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct ARView: View {
+    @StateObject var arManager = ARViewManager()
+    @EnvironmentObject var appManager: AppManager
     
     var arView: some View {
         ARComponent()
+            .environmentObject(arManager)
+            .environmentObject(appManager)
+            .edgesIgnoringSafeArea(.all)
+            .overlay(
+                VStack {
+                    //
+                }
+            )
     }
     
     var body: some View {

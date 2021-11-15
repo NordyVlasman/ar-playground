@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		881D0901273BD41800A082D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D0900273BD41800A082D6 /* AppDelegate.swift */; };
-		881D0903273BD41800A082D6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D0902273BD41800A082D6 /* ContentView.swift */; };
 		881D0907273BD41A00A082D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 881D0906273BD41A00A082D6 /* Assets.xcassets */; };
 		881D090A273BD41A00A082D6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 881D0909273BD41A00A082D6 /* Preview Assets.xcassets */; };
 		881D0914273BD41A00A082D6 /* CortinaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D0913273BD41A00A082D6 /* CortinaTests.swift */; };
@@ -25,6 +23,8 @@
 		88B37AB42742965400B24334 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B37AB32742965300B24334 /* AppManager.swift */; };
 		88B37AB62742969700B24334 /* AppManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B37AB52742969700B24334 /* AppManagerDelegate.swift */; };
 		88B37AB8274297D200B24334 /* ARViewController+AppManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B37AB7274297D200B24334 /* ARViewController+AppManagerDelegate.swift */; };
+		88B37ABB2742997C00B24334 /* Art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B37ABA2742997C00B24334 /* Art.scnassets */; };
+		88B37ABD27429A7F00B24334 /* CortinaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B37ABC27429A7F00B24334 /* CortinaApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +46,6 @@
 
 /* Begin PBXFileReference section */
 		881D08FD273BD41800A082D6 /* Cortina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cortina.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		881D0900273BD41800A082D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		881D0902273BD41800A082D6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		881D0906273BD41A00A082D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		881D0909273BD41A00A082D6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		881D090F273BD41A00A082D6 /* CortinaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CortinaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +63,8 @@
 		88B37AB32742965300B24334 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		88B37AB52742969700B24334 /* AppManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManagerDelegate.swift; sourceTree = "<group>"; };
 		88B37AB7274297D200B24334 /* ARViewController+AppManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+AppManagerDelegate.swift"; sourceTree = "<group>"; };
+		88B37ABA2742997C00B24334 /* Art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Art.scnassets; sourceTree = "<group>"; };
+		88B37ABC27429A7F00B24334 /* CortinaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CortinaApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,15 +116,13 @@
 		881D08FF273BD41800A082D6 /* Cortina */ = {
 			isa = PBXGroup;
 			children = (
+				88B37AB92742996800B24334 /* Assets */,
 				88B37AA227428D9B00B24334 /* Managers */,
 				88B37AA127428D9600B24334 /* Models */,
 				88B37AA027428D9200B24334 /* Views */,
 				88B37A9F27428D8D00B24334 /* Delegates */,
 				88B37A9E27428D8600B24334 /* Controllers */,
-				881D0900273BD41800A082D6 /* AppDelegate.swift */,
-				881D0902273BD41800A082D6 /* ContentView.swift */,
-				881D0906273BD41A00A082D6 /* Assets.xcassets */,
-				881D0908273BD41A00A082D6 /* Preview Content */,
+				88B37ABC27429A7F00B24334 /* CortinaApp.swift */,
 			);
 			path = Cortina;
 			sourceTree = "<group>";
@@ -213,6 +211,16 @@
 				88B37AB7274297D200B24334 /* ARViewController+AppManagerDelegate.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		88B37AB92742996800B24334 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				881D0906273BD41A00A082D6 /* Assets.xcassets */,
+				881D0908273BD41A00A082D6 /* Preview Content */,
+				88B37ABA2742997C00B24334 /* Art.scnassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +335,7 @@
 			files = (
 				881D090A273BD41A00A082D6 /* Preview Assets.xcassets in Resources */,
 				881D0907273BD41A00A082D6 /* Assets.xcassets in Resources */,
+				88B37ABB2742997C00B24334 /* Art.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,15 +361,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				88B37AA927428E6000B24334 /* ARView.swift in Sources */,
+				88B37ABD27429A7F00B24334 /* CortinaApp.swift in Sources */,
 				88B37AB42742965400B24334 /* AppManager.swift in Sources */,
 				88B37AB22742940900B24334 /* ARViewManager.swift in Sources */,
 				88B37AB62742969700B24334 /* AppManagerDelegate.swift in Sources */,
 				88B37AAB27428EA000B24334 /* ARManagerDelegate.swift in Sources */,
 				88B37AA427428DAF00B24334 /* ARViewController.swift in Sources */,
-				881D0903273BD41800A082D6 /* ContentView.swift in Sources */,
 				88B37AA727428DE500B24334 /* ARComponent.swift in Sources */,
 				88B37AB8274297D200B24334 /* ARViewController+AppManagerDelegate.swift in Sources */,
-				881D0901273BD41800A082D6 /* AppDelegate.swift in Sources */,
 				88B37AB0274290B800B24334 /* ARViewController+ARBaseDelegate.swift in Sources */,
 				88B37AAE27428EF700B24334 /* ARViewController+ARManagerDelegate.swift in Sources */,
 			);
@@ -522,7 +530,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Cortina/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Cortina/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 8BUR3H37HV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -553,7 +561,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Cortina/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Cortina/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 8BUR3H37HV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
