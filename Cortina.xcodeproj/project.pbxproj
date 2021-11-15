@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		881D0901273BD41800A082D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D0900273BD41800A082D6 /* AppDelegate.swift */; };
 		881D0903273BD41800A082D6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D0902273BD41800A082D6 /* ContentView.swift */; };
-		881D0905273BD41800A082D6 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 881D0904273BD41800A082D6 /* Experience.rcproject */; };
 		881D0907273BD41A00A082D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 881D0906273BD41A00A082D6 /* Assets.xcassets */; };
 		881D090A273BD41A00A082D6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 881D0909273BD41A00A082D6 /* Preview Assets.xcassets */; };
 		881D0914273BD41A00A082D6 /* CortinaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D0913273BD41A00A082D6 /* CortinaTests.swift */; };
 		881D091E273BD41A00A082D6 /* CortinaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D091D273BD41A00A082D6 /* CortinaUITests.swift */; };
 		881D0920273BD41A00A082D6 /* CortinaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D091F273BD41A00A082D6 /* CortinaUITestsLaunchTests.swift */; };
+		88B37A9D27428D2A00B24334 /* package-arbase in Frameworks */ = {isa = PBXBuildFile; productRef = 88B37A9C27428D2A00B24334 /* package-arbase */; };
+		88B37AA427428DAF00B24334 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B37AA327428DAF00B24334 /* ARViewController.swift */; };
+		88B37AA727428DE500B24334 /* ARComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B37AA627428DE500B24334 /* ARComponent.swift */; };
+		88B37AA927428E6000B24334 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B37AA827428E6000B24334 /* ARView.swift */; };
+		88B37AAB27428EA000B24334 /* ARManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B37AAA27428EA000B24334 /* ARManagerDelegate.swift */; };
+		88B37AAE27428EF700B24334 /* ARViewController+ARManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B37AAD27428EF700B24334 /* ARViewController+ARManagerDelegate.swift */; };
+		88B37AB0274290B800B24334 /* ARViewController+ARBaseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B37AAF274290B800B24334 /* ARViewController+ARBaseDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +44,6 @@
 		881D08FD273BD41800A082D6 /* Cortina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cortina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		881D0900273BD41800A082D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		881D0902273BD41800A082D6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		881D0904273BD41800A082D6 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		881D0906273BD41A00A082D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		881D0909273BD41A00A082D6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		881D090F273BD41A00A082D6 /* CortinaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CortinaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +51,12 @@
 		881D0919273BD41A00A082D6 /* CortinaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CortinaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		881D091D273BD41A00A082D6 /* CortinaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CortinaUITests.swift; sourceTree = "<group>"; };
 		881D091F273BD41A00A082D6 /* CortinaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CortinaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		88B37AA327428DAF00B24334 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		88B37AA627428DE500B24334 /* ARComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARComponent.swift; sourceTree = "<group>"; };
+		88B37AA827428E6000B24334 /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
+		88B37AAA27428EA000B24334 /* ARManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARManagerDelegate.swift; sourceTree = "<group>"; };
+		88B37AAD27428EF700B24334 /* ARViewController+ARManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+ARManagerDelegate.swift"; sourceTree = "<group>"; };
+		88B37AAF274290B800B24334 /* ARViewController+ARBaseDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+ARBaseDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B37A9D27428D2A00B24334 /* package-arbase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,9 +108,13 @@
 		881D08FF273BD41800A082D6 /* Cortina */ = {
 			isa = PBXGroup;
 			children = (
+				88B37AA227428D9B00B24334 /* Managers */,
+				88B37AA127428D9600B24334 /* Models */,
+				88B37AA027428D9200B24334 /* Views */,
+				88B37A9F27428D8D00B24334 /* Delegates */,
+				88B37A9E27428D8600B24334 /* Controllers */,
 				881D0900273BD41800A082D6 /* AppDelegate.swift */,
 				881D0902273BD41800A082D6 /* ContentView.swift */,
-				881D0904273BD41800A082D6 /* Experience.rcproject */,
 				881D0906273BD41A00A082D6 /* Assets.xcassets */,
 				881D0908273BD41A00A082D6 /* Preview Content */,
 			);
@@ -130,6 +146,63 @@
 			path = CortinaUITests;
 			sourceTree = "<group>";
 		};
+		88B37A9E27428D8600B24334 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				88B37AAC27428EE600B24334 /* Extensions */,
+				88B37AA327428DAF00B24334 /* ARViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		88B37A9F27428D8D00B24334 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				88B37AAA27428EA000B24334 /* ARManagerDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		88B37AA027428D9200B24334 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				88B37AA527428DDB00B24334 /* Components */,
+				88B37AA827428E6000B24334 /* ARView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		88B37AA127428D9600B24334 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		88B37AA227428D9B00B24334 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		88B37AA527428DDB00B24334 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				88B37AA627428DE500B24334 /* ARComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		88B37AAC27428EE600B24334 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				88B37AAD27428EF700B24334 /* ARViewController+ARManagerDelegate.swift */,
+				88B37AAF274290B800B24334 /* ARViewController+ARBaseDelegate.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +219,9 @@
 			dependencies = (
 			);
 			name = Cortina;
+			packageProductDependencies = (
+				88B37A9C27428D2A00B24334 /* package-arbase */,
+			);
 			productName = Cortina;
 			productReference = 881D08FD273BD41800A082D6 /* Cortina.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +294,9 @@
 				Base,
 			);
 			mainGroup = 881D08F4273BD41700A082D6;
+			packageReferences = (
+				88B37A9B27428D2A00B24334 /* XCRemoteSwiftPackageReference "arbase-ios" */,
+			);
 			productRefGroup = 881D08FE273BD41800A082D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,9 +339,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B37AA927428E6000B24334 /* ARView.swift in Sources */,
+				88B37AAB27428EA000B24334 /* ARManagerDelegate.swift in Sources */,
+				88B37AA427428DAF00B24334 /* ARViewController.swift in Sources */,
 				881D0903273BD41800A082D6 /* ContentView.swift in Sources */,
+				88B37AA727428DE500B24334 /* ARComponent.swift in Sources */,
 				881D0901273BD41800A082D6 /* AppDelegate.swift in Sources */,
-				881D0905273BD41800A082D6 /* Experience.rcproject in Sources */,
+				88B37AB0274290B800B24334 /* ARViewController+ARBaseDelegate.swift in Sources */,
+				88B37AAE27428EF700B24334 /* ARViewController+ARManagerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +677,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		88B37A9B27428D2A00B24334 /* XCRemoteSwiftPackageReference "arbase-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:NordyVlasman/arbase-ios.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		88B37A9C27428D2A00B24334 /* package-arbase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88B37A9B27428D2A00B24334 /* XCRemoteSwiftPackageReference "arbase-ios" */;
+			productName = "package-arbase";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 881D08F5273BD41800A082D6 /* Project object */;
 }
