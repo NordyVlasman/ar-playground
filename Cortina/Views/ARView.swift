@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct ARView: View {
+    @Environment(\.openURL) var openURL
+
     @EnvironmentObject var arManager: ARViewManager
     @EnvironmentObject var appManager: AppManager
     
     @State private var currentState: ShowState = .overview
     @State private var isCollapsed: Bool = false
 
+    @State var showSafari = false
+    @State var urlString = ""
+
+    
     private var colors = CortinaColors.allValues
     
     // MARK: - Root views
@@ -172,7 +178,8 @@ struct ARView: View {
             
             // Specs
             Button(action: {
-                currentState = .itemSelection
+                self.urlString = "https://www.cortinafietsen.nl/stadsfietsen/cortina-u4-transport-denim-damesfiets/product/CT3D50TRM"
+                self.showSafari = true
             }, label: {
                 VStack {
                     Spacer()
@@ -201,7 +208,7 @@ struct ARView: View {
             
             // Accessoires
             Button(action: {
-                currentState = .colorSelection
+                currentState = .itemSelection
             }, label: {
                 VStack {
                     Spacer()
@@ -230,7 +237,8 @@ struct ARView: View {
             
             // Assortiment
             Button(action: {
-                currentState = .colorSelection
+                self.urlString = "https://www.cortinafietsen.nl/stadsfietsen/catalog/WEB/WCF08"
+                self.showSafari = true
             }, label: {
                 VStack {
                     Spacer()
@@ -327,6 +335,35 @@ struct ARView: View {
             )
             .background(.white)
             .cornerRadius(10)
+            
+            // Kinderzitje
+            Button(action: {
+                arManager.toggleItem("kinderzitje")
+            }, label: {
+                VStack {
+                    Spacer()
+                    Image(systemName: "bicycle")
+                        .font(.title)
+                        .foregroundColor(.gray)
+                        .frame(
+                            width: 40,
+                            height: 40,
+                            alignment: .center
+                        )
+                    Spacer()
+                    Text("Kinderzitje")
+                        .font(.headline)
+                        .foregroundColor(.gray)
+                    Spacer()
+                }
+            })
+            .frame(
+                width: 120,
+                height: 120,
+                alignment: .center
+            )
+            .background(.white)
+            .cornerRadius(10)
         }
     }
     
@@ -334,5 +371,8 @@ struct ARView: View {
     
     var body: some View {
         arView
+            .sheet(isPresented: $showSafari) {
+                SafariView(url: urlString)
+            }
     }
 }
