@@ -12,10 +12,14 @@ import SwiftUI
 class ARViewManager: ObservableObject {
     weak var delegate: ARManagerDelegate?
     
-    @State var currentColor: CortinaColors = .Black
+    @Published var currentColor: CortinaColors = .Black
     
     func changeColor(to color: CortinaColors) {
         currentColor = color
         delegate?.changeColor(to: color.color)
+    }
+    
+    func toggleItem(_ item: String) {
+        delegate?.toggleItem(item)
     }
 }

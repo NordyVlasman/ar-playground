@@ -66,3 +66,7 @@ enum ShowState {
     case colorSelection
     case itemSelection
 }
+
+enum ModelSelection {
+    
+}

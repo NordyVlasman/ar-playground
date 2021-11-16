@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct ARView: View {
-    @StateObject var arManager = ARViewManager()
+    @EnvironmentObject var arManager: ARViewManager
     @EnvironmentObject var appManager: AppManager
     
     @State private var currentState: ShowState = .overview
     @State private var isCollapsed: Bool = false
 
     private var colors = CortinaColors.allValues
+    
+    // MARK: - Root views
     
     var arView: some View {
         ARComponent()
@@ -28,6 +30,32 @@ struct ARView: View {
                 }
             )
     }
+    
+    var editingOverlay: some View {
+        VStack {
+            HStack {
+                Spacer()
+                if appManager.isEditingModel {
+                    Button(action: {
+                        appManager.changeEditingModel()
+                    }, label: {
+                        VStack {
+                            Image(systemName: "checkmark")
+                                .font(.title)
+                                .foregroundColor(.white)
+                        }
+                        .padding()
+                        .background(Color.gray)
+                        .mask(Circle())
+                    })
+                }
+            }
+            Spacer()
+        }
+        .padding()
+    }
+    
+    // MARK: - Components
     
     var modalHeading: some View {
         VStack {
@@ -91,17 +119,18 @@ struct ARView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         switch currentState {
                         case .overview:
-                            changeColorView
+                            modifyOverview
                         case .colorSelection:
                             changeColorView
                         case .itemSelection:
-                            changeColorView
+                            customizeView
                         }
                     }
                     .padding(.horizontal, 15)
                 }
             }
             .padding(.bottom, 25)
+            .background(.white)
             .background(VisualEffectBlur(blurStyle: .light))
             .cornerRadius(10, corners: [.topLeft, .topRight])
             .opacity(0.9)
@@ -109,28 +138,125 @@ struct ARView: View {
         .ignoresSafeArea(.all)
     }
     
-    var editingOverlay: some View {
-        VStack {
-            HStack {
-                Spacer()
-                if appManager.isEditingModel {
-                    Button(action: {
-                        appManager.changeEditingModel()
-                    }, label: {
-                        VStack {
-                            Image(systemName: "checkmark")
-                                .font(.title)
-                                .foregroundColor(.white)
-                        }
-                        .padding()
-                        .background(Color.gray)
-                        .mask(Circle())
-                    })
+    var modifyOverview: some View {
+        HStack(spacing: 20) {
+            
+            // Color picker
+            Button(action: {
+                currentState = .colorSelection
+            }, label: {
+                VStack {
+                    Spacer()
+                    Image(systemName: "eyedropper")
+                        .font(.title)
+                        .foregroundColor(.gray)
+                        .frame(
+                            width: 40,
+                            height: 40,
+                            alignment: .center
+                        )
+                    Spacer()
+                    Text("Kleur")
+                        .font(.headline)
+                        .foregroundColor(.gray)
+                    Spacer()
                 }
-            }
-            Spacer()
+            })
+            .frame(
+                width: 120,
+                height: 120,
+                alignment: .center
+            )
+            .background(.white)
+            .cornerRadius(10)
+            
+            // Specs
+            Button(action: {
+                currentState = .itemSelection
+            }, label: {
+                VStack {
+                    Spacer()
+                    Image(systemName: "list.dash")
+                        .font(.title)
+                        .foregroundColor(.gray)
+                        .frame(
+                            width: 40,
+                            height: 40,
+                            alignment: .center
+                        )
+                    Spacer()
+                    Text("Specificaties")
+                        .font(.headline)
+                        .foregroundColor(.gray)
+                    Spacer()
+                }
+            })
+            .frame(
+                width: 120,
+                height: 120,
+                alignment: .center
+            )
+            .background(.white)
+            .cornerRadius(10)
+            
+            // Accessoires
+            Button(action: {
+                currentState = .colorSelection
+            }, label: {
+                VStack {
+                    Spacer()
+                    Image(systemName: "bag")
+                        .font(.title)
+                        .foregroundColor(.gray)
+                        .frame(
+                            width: 40,
+                            height: 40,
+                            alignment: .center
+                        )
+                    Spacer()
+                    Text("Accessoires")
+                        .font(.headline)
+                        .foregroundColor(.gray)
+                    Spacer()
+                }
+            })
+            .frame(
+                width: 120,
+                height: 120,
+                alignment: .center
+            )
+            .background(.white)
+            .cornerRadius(10)
+            
+            // Assortiment
+            Button(action: {
+                currentState = .colorSelection
+            }, label: {
+                VStack {
+                    Spacer()
+                    Image(systemName: "bicycle")
+                        .font(.title)
+                        .foregroundColor(.gray)
+                        .frame(
+                            width: 40,
+                            height: 40,
+                            alignment: .center
+                        )
+                    Spacer()
+                    Text("Assortiment")
+                        .font(.headline)
+                        .foregroundColor(.gray)
+                    Spacer()
+                }
+            })
+            .frame(
+                width: 120,
+                height: 120,
+                alignment: .center
+            )
+            .background(.white)
+            .cornerRadius(10)
         }
-        .padding()
     }
     
     private var changeColorView: some View {
@@ -140,14 +266,71 @@ struct ARView: View {
                     arManager.changeColor(to: color)
                 }, label: {
                     VStack {
+                        Spacer()
                         Image(systemName: "circlebadge.fill")
+                            .font(.title)
                             .foregroundColor(color.swiftUIColor)
-                            .font(.largeTitle)
+                            .frame(
+                                width: 40,
+                                height: 40,
+                                alignment: .center
+                            )
+                        Spacer()
+                        Text("\(color.rawValue)")
+                            .font(.headline)
+                            .foregroundColor(arManager.currentColor == color ? .black : .gray)
+                        Spacer()
                     }
                 })
+                .frame(
+                    width: 120,
+                    height: 120,
+                    alignment: .center
+                )
+                .background(.white)
+                .cornerRadius(10)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(arManager.currentColor == color ? .gray : .white, lineWidth: 1.5)
+                )
             }
         }
     }
+    
+    private var customizeView: some View {
+        HStack(spacing: 20) {
+            // Basket
+            Button(action: {
+                arManager.toggleItem("mandje")
+            }, label: {
+                VStack {
+                    Spacer()
+                    Image(systemName: "bag")
+                        .font(.title)
+                        .foregroundColor(.gray)
+                        .frame(
+                            width: 40,
+                            height: 40,
+                            alignment: .center
+                        )
+                    Spacer()
+                    Text("Mandje")
+                        .font(.headline)
+                        .foregroundColor(.gray)
+                    Spacer()
+                }
+            })
+            .frame(
+                width: 120,
+                height: 120,
+                alignment: .center
+            )
+            .background(.white)
+            .cornerRadius(10)
+        }
+    }
+    
+    //MARK: - Body
     
     var body: some View {
         arView

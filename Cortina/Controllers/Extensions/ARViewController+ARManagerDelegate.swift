@@ -18,6 +18,9 @@ extension ARViewController: ARManagerDelegate {
     }
     
     func toggleItem(_ itemName: String) {
-        //TODO: - Add functions here.
+        guard let node = sceneView.currentVirtualObject?.childNode(withName: itemName, recursively: true) else {
+            return
+        }
+        node.isHidden.toggle()
     }
 }

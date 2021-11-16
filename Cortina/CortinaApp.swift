@@ -11,11 +11,13 @@ import SwiftUI
 struct CortinaApp: App {
     
     @StateObject var appManager = AppManager()
+    @StateObject var arManager  = ARViewManager()
     
     var body: some Scene {
         WindowGroup {
             ARView()
                 .environmentObject(appManager)
+                .environmentObject(arManager)
         }
     }
 }
