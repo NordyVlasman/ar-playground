@@ -27,6 +27,9 @@
 		88B37ABD27429A7F00B24334 /* CortinaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B37ABC27429A7F00B24334 /* CortinaApp.swift */; };
 		88B37ABF27429B9B00B24334 /* ARBase.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B37ABE27429B9B00B24334 /* ARBase.scnassets */; };
 		88B37AC127429D9F00B24334 /* CortinaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B37AC027429D9F00B24334 /* CortinaModel.swift */; };
+		88BD17542743BE0D00682533 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD17532743BE0C00682533 /* VisualEffectBlur.swift */; };
+		88BD17562743BEE700682533 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD17552743BEE700682533 /* RoundedCorner.swift */; };
+		88BD17582743BF7100682533 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD17572743BF7100682533 /* View+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		88B37ABC27429A7F00B24334 /* CortinaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CortinaApp.swift; sourceTree = "<group>"; };
 		88B37ABE27429B9B00B24334 /* ARBase.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = ARBase.scnassets; sourceTree = "<group>"; };
 		88B37AC027429D9F00B24334 /* CortinaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CortinaModel.swift; sourceTree = "<group>"; };
+		88BD17532743BE0C00682533 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
+		88BD17552743BEE700682533 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		88BD17572743BF7100682533 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,7 @@
 		881D08FF273BD41800A082D6 /* Cortina */ = {
 			isa = PBXGroup;
 			children = (
+				88BD17522743BE0600682533 /* Extensions */,
 				88B37AB92742996800B24334 /* Assets */,
 				88B37AA227428D9B00B24334 /* Managers */,
 				88B37AA127428D9600B24334 /* Models */,
@@ -227,6 +234,16 @@
 				88B37ABA2742997C00B24334 /* Art.scnassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		88BD17522743BE0600682533 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				88BD17532743BE0C00682533 /* VisualEffectBlur.swift */,
+				88BD17552743BEE700682533 /* RoundedCorner.swift */,
+				88BD17572743BF7100682533 /* View+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,11 +390,14 @@
 				88B37AB22742940900B24334 /* ARViewManager.swift in Sources */,
 				88B37AB62742969700B24334 /* AppManagerDelegate.swift in Sources */,
 				88B37AAB27428EA000B24334 /* ARManagerDelegate.swift in Sources */,
+				88BD17562743BEE700682533 /* RoundedCorner.swift in Sources */,
 				88B37AC127429D9F00B24334 /* CortinaModel.swift in Sources */,
+				88BD17542743BE0D00682533 /* VisualEffectBlur.swift in Sources */,
 				88B37AA427428DAF00B24334 /* ARViewController.swift in Sources */,
 				88B37AA727428DE500B24334 /* ARComponent.swift in Sources */,
 				88B37AB8274297D200B24334 /* ARViewController+AppManagerDelegate.swift in Sources */,
 				88B37AB0274290B800B24334 /* ARViewController+ARBaseDelegate.swift in Sources */,
+				88BD17582743BF7100682533 /* View+Extensions.swift in Sources */,
 				88B37AAE27428EF700B24334 /* ARViewController+ARManagerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

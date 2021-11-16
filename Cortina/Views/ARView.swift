@@ -11,6 +11,11 @@ struct ARView: View {
     @StateObject var arManager = ARViewManager()
     @EnvironmentObject var appManager: AppManager
     
+    @State private var currentState: ShowState = .overview
+    @State private var isCollapsed: Bool = false
+
+    private var colors = CortinaColors.allValues
+    
     var arView: some View {
         ARComponent()
             .environmentObject(arManager)
@@ -19,8 +24,89 @@ struct ARView: View {
             .overlay(
                 VStack {
                     editingOverlay
+                    modalHeading
                 }
             )
+    }
+    
+    var modalHeading: some View {
+        VStack {
+            Spacer()
+            VStack {
+                VStack {
+                    HStack {
+                        if currentState != .overview {
+                            Button(action: {
+                                currentState = .overview
+                            }, label: {
+                                Image(systemName: "chevron.left")
+                                    .font(.title2)
+                                    .foregroundColor(.gray)
+                                    .padding(5)
+                            })
+                        }
+                        
+                        Button(action: {
+                            isCollapsed = !isCollapsed
+                        }, label: {
+                            Text("D")
+                                .foregroundColor(.white)
+                                .frame(
+                                    width: 35,
+                                    height: 32,
+                                    alignment: .center
+                                )
+                                .background(.gray.opacity(0.6))
+                                .cornerRadius(5)
+                            
+                            Text("Cortina U4 Transport")
+                                .font(.title3)
+                                .foregroundColor(.gray)
+                                .padding(.trailing, currentState != .overview ? 5 : 0)
+                            
+                            Text("€ 799")
+                                .foregroundColor(.white)
+                                .frame(
+                                    width: 59,
+                                    height: 32,
+                                    alignment: .center
+                                )
+                                .background(.gray)
+                                .cornerRadius(5)
+                            
+                            Spacer()
+                            
+                            Image(systemName: isCollapsed ? "chevron.up" : "chevron.down")
+                                .font(.title2)
+                                .foregroundColor(.gray)
+                            
+                        })
+                        .padding(.leading, 5)
+                    }
+                    .padding(.horizontal, 15)
+                    .padding(.vertical, 10)
+                    .padding(.top, 10)
+                }
+                if isCollapsed {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        switch currentState {
+                        case .overview:
+                            changeColorView
+                        case .colorSelection:
+                            changeColorView
+                        case .itemSelection:
+                            changeColorView
+                        }
+                    }
+                    .padding(.horizontal, 15)
+                }
+            }
+            .padding(.bottom, 25)
+            .background(VisualEffectBlur(blurStyle: .light))
+            .cornerRadius(10, corners: [.topLeft, .topRight])
+            .opacity(0.9)
+        }
+        .ignoresSafeArea(.all)
     }
     
     var editingOverlay: some View {
@@ -47,13 +133,23 @@ struct ARView: View {
         .padding()
     }
     
+    private var changeColorView: some View {
+        HStack(spacing: 20) {
+            ForEach(colors, id: \.self) { color in
+                Button(action: {
+                    arManager.changeColor(to: color)
+                }, label: {
+                    VStack {
+                        Image(systemName: "circlebadge.fill")
+                            .foregroundColor(color.swiftUIColor)
+                            .font(.largeTitle)
+                    }
+                })
+            }
+        }
+    }
+    
     var body: some View {
         arView
-    }
-}
-
-struct ARView_Previews: PreviewProvider {
-    static var previews: some View {
-        ARView()
     }
 }

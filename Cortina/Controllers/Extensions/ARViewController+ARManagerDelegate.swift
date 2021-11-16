@@ -10,7 +10,11 @@ import UIKit
 
 extension ARViewController: ARManagerDelegate {
     func changeColor(to color: UIColor) {
-        //TODO: - Add functions here.
+        guard let object = sceneView.currentVirtualObject?.childNode(withName: "Cylinder001", recursively: true) else {
+            return
+        }
+        
+        object.geometry?.firstMaterial?.diffuse.contents = color
     }
     
     func toggleItem(_ itemName: String) {

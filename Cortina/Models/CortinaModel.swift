@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 enum CortinaColors: String {
     case Black      = "black"
@@ -41,4 +42,27 @@ enum CortinaColors: String {
             }
         }
     }
+    
+    var swiftUIColor: Color {
+        get {
+            switch self {
+            case .Red:
+                return Color.red
+            case .Black:
+                return Color.black
+            case .Purple:
+                return Color.purple
+            case .Green:
+                return Color.green
+            case .Orange:
+                return Color.orange
+            }
+        }
+    }
+}
+
+enum ShowState {
+    case overview
+    case colorSelection
+    case itemSelection
 }
